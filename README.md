@@ -78,6 +78,18 @@ After writing the code in solidity we can compile the code and then deploy the c
 
 [Deferred_Equity_deploy](Images/Deferred_Equity_deploy.png)
 
+Once we have deployed we can check that our function works by trying to select the 'distribute' function in order to transfer 1000 shares. This, however, will give us the following error:
+
+[Deferred_Equity_error](Images/Deferred_error.png)
+
+This is because, in our code we have a check to make sure that the unlock_time is not less than or equal to now in order to prevent the employee from accessing or being given equity before the lockup period has expired. Rather than waiting for a year to make sure that our function works we can simply select the 'fast forward' function, which will add 400 days to the unlock_time, and thus allow the equity to be distributed. 
+
+[Fast_forward](Images/Fast_forward.png)
+
+Once we have done that we can once again hit the 'distribute' function. We can check to make sure it worked by selecting the 'distributed_shares' icon to make sure that a positive number of shares have been distributed out.
+
+[Distributed_shares](Images/Distributed_shares.png)
+
 # Deploying Contracts to Kovan Network
 
 After compiling, deploying and testing our contracts on our local test networks, the next step is to point our MetaMask towards the Kovan network to see how, or if, the operate in the new environment. 
