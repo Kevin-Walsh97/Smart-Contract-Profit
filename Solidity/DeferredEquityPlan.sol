@@ -34,7 +34,7 @@ contract DeferredEquityPlan {
     }
     
     function fastforward() public {
-        fake_now += 100 days;
+        fake_now += 400 days;
     }
 
     function distribute() public {
